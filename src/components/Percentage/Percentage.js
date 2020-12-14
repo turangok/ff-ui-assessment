@@ -1,5 +1,8 @@
 import React from 'react'; 
+import PropTypes from 'prop-types';
+
 import {StyledPercentage, StyledPercentageVal} from './Percentage.styles'
+
 export const Percentage = ({desc, ratio}) => {
     return (
         <StyledPercentage data-testid='Percentage'> 
@@ -11,3 +14,8 @@ export const Percentage = ({desc, ratio}) => {
     );
 
 } 
+
+Percentage.propTypes = {
+    desc: PropTypes.string,
+    ratio: PropTypes.number,
+};

@@ -1,6 +1,5 @@
 import React, { useMemo } from 'react';
-import robot from './design.png';
-
+import { formatRate } from '../../helper';
 import {
   StyledAccountOverview,
   StyledPercentages,
@@ -13,10 +12,14 @@ import { ContactInfo, Percentage, Sales } from '../../components';
 
 export const AccountOverview = ({ data }) => {
   const ratios = useMemo(() => {
-    const uploadRatio =
-      (data?.salesOverview.successfulUploads / data?.salesOverview.uploads) * 100;
-    const saveRatio =
-      (data?.salesOverview.linesSaved / data?.salesOverview.linesAttempted) * 100;
+    const uploadRatio = formatRate(
+      data?.salesOverview.successfulUploads,
+      data?.salesOverview.uploads
+    );
+    const saveRatio = formatRate(
+      data?.salesOverview.linesSaved,
+      data?.salesOverview.linesAttempted
+    );
     return { uploadRatio, saveRatio };
   }, [data?.salesOverview]);
 
@@ -53,7 +56,6 @@ export const AccountOverview = ({ data }) => {
           </StyledContent>
         </div>
       </StyledAccountOverview>
-      <img src={robot} alt="robot" border="0.06rem" />
     </>
   );
 };

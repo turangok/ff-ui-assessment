@@ -9,8 +9,13 @@
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.1",
     "@testing-library/user-event": "^12.2.0",
+    "a11y-dialog": "^5.4.2",
+    "i18next": "^19.8.4",
+    "i18next-browser-languagedetector": "^6.0.1",
+    "i18next-http-backend": "^1.0.21",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-i18next": "^11.8.3",
     "react-scripts": "4.0.0",
     "styled-components": "^5.2.1"
   },
